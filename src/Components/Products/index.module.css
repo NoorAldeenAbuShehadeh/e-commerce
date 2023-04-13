@@ -4,10 +4,12 @@
     margin-right: 1em;
     column-gap: 1em
 }
-.separator{
+
+.separator {
     color: #E07575;
     margin-top: 1.7em;
 }
+
 .arrowBtn {
     background: #F5F5F5;
     border: none;
@@ -15,11 +17,21 @@
     height: 46px;
     border-radius: 50%;
 }
-.dateTimeBlock{
+
+.dateTimeBlock {
     display: flex;
     margin-bottom: 30px;
     margin-left: -20em;
     margin-top: -.3em;
+}
+
+.view_all {
+    color: white;
+    height: 56px;
+    width: 234px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 16px;
 }
 
 .products_title {
@@ -50,6 +62,13 @@
     column-gap: 1em;
 }
 
+.center_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .content {
     margin-top: 15em;
+    margin-bottom: 4em;
 }

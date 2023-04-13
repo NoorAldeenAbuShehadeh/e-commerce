@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import { useState } from "react";
-import { IconButton } from "@mui/material";
+import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "slick-carousel/slick/slick.css";
@@ -23,7 +23,6 @@ const Products = () => {
     <div className={styles.content}>
       <div className={styles.flex_container}>
         <div className={styles.today_div} />
-           
         <ProductTitle title={"Today's"} className={styles.today} />
       </div>
       <div className={styles.container}>
@@ -32,22 +31,16 @@ const Products = () => {
           className={styles.products_title}
           title={"Flash Sales"}
         />
-            <div className={styles.dateTimeBlock}>
-            <DateTimeContainer number={"03"}  
-           
-        type={"Days"} /> 
-        <p className={styles.separator}>:</p>
-        <DateTimeContainer number={"23"} 
-        type={"Hours"} />
-     <p className={styles.separator}>:</p>
-        <DateTimeContainer number={"19"} 
-        type={"Minutes"} />
-      <p className={styles.separator}>:</p>
-        <DateTimeContainer number={"56"} 
-        type={"Seconds"} />
-     
-      </div>
-    
+        <div className={styles.dateTimeBlock}>
+          <DateTimeContainer number={"03"} type={"Days"} />
+          <p className={styles.separator}>:</p>
+          <DateTimeContainer number={"23"} type={"Hours"} />
+          <p className={styles.separator}>:</p>
+          <DateTimeContainer number={"19"} type={"Minutes"} />
+          <p className={styles.separator}>:</p>
+          <DateTimeContainer number={"56"} type={"Seconds"} />
+        </div>
+
         <div className={`${styles.controls}`}>
           <IconButton sx={arrowBtn} onClick={sliderRef?.slickPrev}>
             <ArrowBackIcon />
@@ -58,6 +51,17 @@ const Products = () => {
         </div>
       </div>
       <ProductsSlider setSliderRef={setSliderRef} />
+      <div className={styles.center_container}>
+        <Button
+          variant="contained"
+          className={styles.view_all}
+          sx={{
+            backgroundColor: "#DB4444",
+          }}
+        >
+          View All Products
+        </Button>
+      </div>
     </div>
   );
 };
