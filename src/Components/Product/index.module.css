@@ -7,6 +7,20 @@
     filter: contrast(1);
 }
 
+.withshowBtn {
+    margin-top: -1.5em;
+    justify-content: center;
+    display: flex;
+}
+
+.addToCart {
+    width: 100%;
+}
+
+.addToCart:hover {
+    color: #000000;
+}
+
 .product_title {
     font-size: 16px;
 

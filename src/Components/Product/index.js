@@ -5,16 +5,23 @@ import {
   CardContent,
   Rating,
   IconButton,
+  Button,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import ProductTitle from "../ProductTitle";
 import styles from "./index.module.css";
+import { useState } from "react";
 
 const Product = (props) => {
+  const [showBtn, setShowBtn] = useState(false);
   return (
     <div className={`${styles.product}`}>
-      <Card sx={{ background: "#F5F5F5" }}>
+      <Card
+        sx={{ background: "#F5F5F5" }}
+        onMouseMove={() => setShowBtn(true)}
+        onMouseOut={() => setShowBtn(false)}
+      >
         <CardHeader
           avatar={<div className={styles.left_icon}>-40%</div>}
           action={
@@ -38,7 +45,9 @@ const Product = (props) => {
           }
         />
 
-        <CardContent className={styles.product_content}>
+        <CardContent
+          className={showBtn ? styles.withshowBtn : styles.product_content}
+        >
           <Box
             className={styles.product_image}
             component="img"
@@ -49,6 +58,14 @@ const Product = (props) => {
             src={props.image}
           />
         </CardContent>
+        {showBtn && (
+          <Button
+            sx={{ background: "black", color: "white" }}
+            className={styles.addToCart}
+          >
+            Add To Cart
+          </Button>
+        )}
       </Card>
       <ProductTitle title={props.title} className={styles.product_title} />
       <ProductTitle
