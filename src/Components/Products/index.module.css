@@ -44,23 +44,7 @@
     margin-left: 1em;
 }
 
-.today {
-    color: #DB4444;
-}
 
-.today_div {
-    background: #DB4444;
-    width: 20px;
-    height: 40px;
-    border: none;
-    border-radius: 4px;
-}
-
-.flex_container {
-    display: flex;
-    margin-left: 1em;
-    column-gap: 1em;
-}
 
 .center_container {
     display: flex;
@@ -71,4 +55,16 @@
 .content {
     margin-top: 15em;
     margin-bottom: 4em;
+}
+@media only screen and (max-width: 800px) {
+
+    .container{
+        flex-direction: column;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .dateTimeBlock{
+        margin-left: -1em;
+    }
 }

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ProductTitle from "../ProductTitle";
 import ProductsSlider from "./products_slider";
 import DateTimeContainer from "./DateTime";
+import SharedSubtitle from "../sharedSubtitle";
 
 const Products = () => {
   const [sliderRef, setSliderRef] = useState(null);
@@ -21,10 +22,7 @@ const Products = () => {
 
   return (
     <div className={styles.content}>
-      <div className={styles.flex_container}>
-        <div className={styles.today_div} />
-        <ProductTitle title={"Today's"} className={styles.today} />
-      </div>
+      <SharedSubtitle title={"Today's"} />
       <div className={styles.container}>
         <ProductTitle
           variant="h5"
