@@ -15,6 +15,11 @@ import { useState } from "react";
 
 const Product = (props) => {
   const [showBtn, setShowBtn] = useState(false);
+  const avatarT = props.percentage ? (
+    <div className={styles.left_icon}>-40%</div>
+  ) : props.new && props.id % 2 == 0 ? (
+    <div className={styles.new_icon}> New</div>
+  ) : null;
   return (
     <div className={`${styles.product}`}>
       <Card
@@ -23,7 +28,7 @@ const Product = (props) => {
         onMouseOut={() => setShowBtn(false)}
       >
         <CardHeader
-          avatar={<div className={styles.left_icon}>-40%</div>}
+          avatar={avatarT}
           action={
             <div className={styles.actionButtons}>
               <IconButton
@@ -60,7 +65,8 @@ const Product = (props) => {
         </CardContent>
         {showBtn && (
           <Button
-            sx={{ background: "black", color: "white" }}
+            variant="contained"
+            sx={{ background: "black", textTransform: "capitalize" }}
             className={styles.addToCart}
           >
             Add To Cart
