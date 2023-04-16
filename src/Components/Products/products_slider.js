@@ -11,14 +11,14 @@ const ProductsSlider = (props) => {
     axios.get(baseURL).then((response) => {
       setProducts(response.data);
     });
-  }, [products]);
+  }, []);
 
   const sliderSettings = {
     arrows: false,
-    slidesToShow: 3.5,
+    slidesToShow: props.slides ? props.slides : 4.5,
     slidesToScroll: 1,
     infinite: false,
-
+    rows: props.rows ? props.rows : 1,
     responsive: [
       {
         breakpoint: 1024,
@@ -35,9 +35,19 @@ const ProductsSlider = (props) => {
     ],
   };
   return (
-    <Slider ref={props.setSliderRef} {...sliderSettings}>
+    <Slider
+      ref={props?.setSliderRef}
+      {...sliderSettings}
+      className={styles.slider}
+    >
       {products.map((product) => (
-        <Product key={product.id} {...product} className={styles.slide} />
+        <Product
+          key={product.id}
+          percentage={props?.percentage}
+          new={props?.new}
+          {...product}
+          className={styles.slide}
+        />
       ))}
     </Slider>
   );

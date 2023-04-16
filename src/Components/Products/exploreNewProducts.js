@@ -7,10 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductTitle from "../ProductTitle";
 import ProductsSlider from "./products_slider";
-import DateTimeContainer from "./DateTime";
 import SharedSubtitle from "../sharedSubtitle";
 
-const Products = () => {
+const NewProducts = () => {
   const [sliderRef, setSliderRef] = useState(null);
   const arrowBtn = {
     background: "#f5f5f5",
@@ -19,25 +18,15 @@ const Products = () => {
     height: "46px",
     width: "46px",
   };
-
   return (
     <div className={styles.content}>
-      <SharedSubtitle title={"Today's"} />
+      <SharedSubtitle title={"Our Product's"} />
       <div className={styles.container}>
         <ProductTitle
           variant="h5"
           className={styles.products_title}
-          title={"Flash Sales"}
+          title={"Explore Our Products"}
         />
-        <div className={styles.dateTimeBlock}>
-          <DateTimeContainer number={"03"} type={"Days"} />
-          <p className={styles.separator}>:</p>
-          <DateTimeContainer number={"23"} type={"Hours"} />
-          <p className={styles.separator}>:</p>
-          <DateTimeContainer number={"19"} type={"Minutes"} />
-          <p className={styles.separator}>:</p>
-          <DateTimeContainer number={"56"} type={"Seconds"} />
-        </div>
 
         <div className={`${styles.controls}`}>
           <IconButton sx={arrowBtn} onClick={sliderRef?.slickPrev}>
@@ -48,7 +37,13 @@ const Products = () => {
           </IconButton>
         </div>
       </div>
-      <ProductsSlider percentage={true} setSliderRef={setSliderRef} />
+      <ProductsSlider
+        percentage={false}
+        rows={2}
+        slides={4}
+        new={true}
+        setSliderRef={setSliderRef}
+      />
       <div className={styles.center_container}>
         <Button
           variant="contained"
@@ -64,4 +59,4 @@ const Products = () => {
     </div>
   );
 };
-export default Products;
+export default NewProducts;
