@@ -1,16 +1,9 @@
-import * as React from 'react';
-import Slider from './Components/Slider/Slider';
-import CatProduct from './Components/CatProduct';
-import ImageGrid from './Components/ImageGrid/ImageGrid';
-import EServices from './Components/EServices/EServices';
-export default function BasicButtons() {
+
+import Routes from './Components/Routes'
+
+
+export default function App() {
   return (
-    <>
-    <Slider />
-    <CatProduct/>
-    <ImageGrid />
-    <EServices />
-    </>
+    <Routes/>
   );
 }
-
