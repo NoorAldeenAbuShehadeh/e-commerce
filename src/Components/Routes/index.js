@@ -12,6 +12,9 @@ import Footer from "../Footer";
 import Products from "../Products";
 import CatProduct from "../CatProduct";
 import Slider from "../Slider/Slider.js";
+import { Divider } from "@mui/material";
+import BestProducts from "./Components/Products/bestSellingProducts";
+import NewProducts from "./Components/Products/exploreNewProducts";
 const routes = () => {
   return (
     <BrowserRouter>
@@ -34,14 +37,17 @@ const routes = () => {
               <>
                 <Slider />
                 <Products />
+                <Divider variant="middle" />
+                <BestProducts />
+                <Divider variant="middle" />
+                <NewProducts />
                 <CatProduct />
               </>
             }
           />
           {/*-------------------------------- End home page ----------------------------------*/}
 
-            {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}
-
+          {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}
         </Route>
       </Routes>
     </BrowserRouter>

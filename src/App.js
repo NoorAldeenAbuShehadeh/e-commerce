@@ -1,7 +1,7 @@
 import Routes from './Components/Routes'
 
 
-export default function BasicButtons() {
+export default function App() {
   return (
     <Routes/>
   );
