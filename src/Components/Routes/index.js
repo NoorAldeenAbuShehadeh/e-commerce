@@ -13,8 +13,8 @@ import Products from "../Products";
 import CatProduct from "../CatProduct";
 import Slider from "../Slider/Slider.js";
 import { Divider } from "@mui/material";
-import BestProducts from "./Components/Products/bestSellingProducts";
-import NewProducts from "./Components/Products/exploreNewProducts";
+import BestProducts from "../Products/bestSellingProducts";
+import NewProducts from "../Products/exploreNewProducts";
 const routes = () => {
   return (
     <BrowserRouter>
