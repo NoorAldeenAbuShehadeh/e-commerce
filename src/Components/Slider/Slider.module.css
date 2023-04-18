@@ -1,9 +1,9 @@
 .root {
-    position: relative;
+   
     height: 344px;
-    width: 892px;
-    left: 378px;
-    top: 187px;
+   max-width: 892px;
+    margin-top: 45px;
+    margin-left: 10px;
     border-radius: 0px;
     overflow: hidden;
     background-color: black;
@@ -27,24 +27,18 @@
   top: 58px;
 }
 .buyButton {
-  /* background-color: black;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  margin-right: 20px;
-  cursor: pointer;   */
+
   display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 8px;
-color: white;
-position: absolute;
-width: 113px;
-height: 28px;
-left: 67px;
-top: 269px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  color: white;
+  position: absolute;
+  width: 113px;
+  height: 28px;
+  left: 67px;
+  top: 269px;
 }
 
 .arrowIcon{
@@ -78,4 +72,55 @@ flex-grow: 0;
   line-height: 60px;
   color: white;
   letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .root {
+    height: 700px;
+  }
+  .slideContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slideImage {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-bottom: 16px;
+  }
+
+  .slideContent {
+    position: static;
+    width: 100%;
+  }
+
+  .slideTitle {
+    position: static;
+    width: 190px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slideDescription {
+    position: static;
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  
+  .buyButton{
+
+    position: static;
+    width: 113px;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
