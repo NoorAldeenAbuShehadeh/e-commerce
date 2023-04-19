@@ -15,6 +15,8 @@ import Slider from "../Slider/Slider.js";
 import { Divider } from "@mui/material";
 import BestProducts from "../Products/bestSellingProducts";
 import NewProducts from "../Products/exploreNewProducts";
+import RelatedItems from "../Products/relatedItems";
+import DetailsPage from "../DetailsPage/detailsPage";
 const routes = () => {
   return (
     <BrowserRouter>
@@ -45,6 +47,7 @@ const routes = () => {
               </>
             }
           />
+          <Route path="/Details/:product" element={<DetailsPage />} />
           {/*-------------------------------- End home page ----------------------------------*/}
 
           {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}
