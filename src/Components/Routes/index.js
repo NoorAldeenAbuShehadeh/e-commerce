@@ -1,4 +1,5 @@
 import React from "react";
+import MenuList from "../MenuList";
 import {
   BrowserRouter,
   Routes,
@@ -26,6 +27,19 @@ const routes = () => {
           element={
             <>
               <Header />
+               <MenuList
+                li={[
+                      "Woman's Fashion",  
+                      "Men's Fashion",
+                      "Electronics",
+                      "Home & Lifestyle",
+                      "Medicine",
+                      "Sports & Outdoor",
+                      "Baby's & Toys",
+                      "Groceries & Pets",
+                      "Health & Beauty"
+                     ]}
+               />
               <Navigation />
               <Outlet />
               <Footer />
