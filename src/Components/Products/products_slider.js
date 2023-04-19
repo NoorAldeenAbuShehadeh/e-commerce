@@ -15,6 +15,7 @@ const ProductsSlider = (props) => {
 
   const sliderSettings = {
     arrows: false,
+    initialSlide: 0,
     slidesToShow: props.slides ? props.slides : 4.5,
     slidesToScroll: 1,
     infinite: false,
@@ -40,7 +41,7 @@ const ProductsSlider = (props) => {
       {...sliderSettings}
       className={styles.slider}
     >
-      {products.map((product) => (
+      {props.products.map((product) => (
         <Product
           key={product.id}
           percentage={props?.percentage}

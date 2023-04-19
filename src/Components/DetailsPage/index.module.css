@@ -1,0 +1,23 @@
+.content {
+    margin-bottom: 4em;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.detailsTitle {
+    margin-left: 2.2em;
+    margin-top: 5em;
+    display: flex;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .detailsTitle {
+        flex-direction: column;
+    }
+
+}
