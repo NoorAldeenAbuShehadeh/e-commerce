@@ -16,6 +16,10 @@ import Slider from "../Slider/Slider.js";
 import { Divider } from "@mui/material";
 import BestProducts from "../Products/bestSellingProducts";
 import NewProducts from "../Products/exploreNewProducts";
+
+import FeaturedSection from "../ImageGrid/FeaturedSection";
+import EServices from "../EServices/EServices";
+
 import RelatedItems from "../Products/relatedItems";
 import DetailsPage from "../DetailsPage/detailsPage";
 const routes = () => {
@@ -58,8 +62,10 @@ const routes = () => {
                 <Divider variant="middle" />
                 <NewProducts />
                 <CatProduct />
-                {/* <ImageGrid />
-                <EServices /> */}
+
+                <FeaturedSection />
+                <EServices />
+
               </>
             }
           />
