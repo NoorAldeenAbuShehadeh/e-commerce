@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -8,9 +8,17 @@ import "slick-carousel/slick/slick-theme.css";
 import ProductTitle from "../ProductTitle";
 import ProductsSlider from "./products_slider";
 import SharedSubtitle from "../sharedSubtitle";
-
+import axios from "axios";
+const baseURL = "https://fakestoreapi.com/products";
 const NewProducts = () => {
+  const [products, setProducts] = useState([]);
   const [sliderRef, setSliderRef] = useState(null);
+
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
   const arrowBtn = {
     background: "#f5f5f5",
     color: "black",
@@ -42,6 +50,7 @@ const NewProducts = () => {
         rows={2}
         slides={4}
         new={true}
+        products={products}
         setSliderRef={setSliderRef}
       />
       <div className={styles.center_container}>
