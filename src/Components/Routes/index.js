@@ -1,4 +1,5 @@
 import React from "react";
+import MenuList from "../MenuList";
 import {
   BrowserRouter,
   Routes,
@@ -15,8 +16,12 @@ import Slider from "../Slider/Slider.js";
 import { Divider } from "@mui/material";
 import BestProducts from "../Products/bestSellingProducts";
 import NewProducts from "../Products/exploreNewProducts";
+
 import FeaturedSection from "../ImageGrid/FeaturedSection";
 import EServices from "../EServices/EServices";
+
+import RelatedItems from "../Products/relatedItems";
+import DetailsPage from "../DetailsPage/detailsPage";
 const routes = () => {
   return (
     <BrowserRouter>
@@ -26,6 +31,19 @@ const routes = () => {
           element={
             <>
               <Header />
+               <MenuList
+                li={[
+                      "Woman's Fashion",  
+                      "Men's Fashion",
+                      "Electronics",
+                      "Home & Lifestyle",
+                      "Medicine",
+                      "Sports & Outdoor",
+                      "Baby's & Toys",
+                      "Groceries & Pets",
+                      "Health & Beauty"
+                     ]}
+               />
               <Navigation />
               <Outlet />
               <Footer />
@@ -37,18 +55,21 @@ const routes = () => {
             path="/"
             element={
               <>
-                <Slider />
+                {/* <Slider /> */}
                 <Products />
                 <Divider variant="middle" />
                 <BestProducts />
                 <Divider variant="middle" />
                 <NewProducts />
                 <CatProduct />
+
                 <FeaturedSection />
                 <EServices />
+
               </>
             }
           />
+          <Route path="/Details/:product" element={<DetailsPage />} />
           {/*-------------------------------- End home page ----------------------------------*/}
 
           {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}

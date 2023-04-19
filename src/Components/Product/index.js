@@ -12,14 +12,17 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import ProductTitle from "../ProductTitle";
 import styles from "./index.module.css";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const Product = (props) => {
   const [showBtn, setShowBtn] = useState(false);
+  const navigate = useNavigate();
   const avatarT = props.percentage ? (
     <div className={styles.left_icon}>-40%</div>
   ) : props.new && props.id % 2 == 0 ? (
     <div className={styles.new_icon}> New</div>
   ) : null;
+
   return (
     <div className={`${styles.product}`}>
       <Card
@@ -73,7 +76,11 @@ const Product = (props) => {
           </Button>
         )}
       </Card>
-      <ProductTitle title={props.title} className={styles.product_title} />
+      <ProductTitle
+        title={props.title}
+        className={styles.product_title}
+        onClick={() => navigate(`/Details/${props.title}`)}
+      />
       <ProductTitle
         title={`$${props.price}`}
         className={styles.product_price}
