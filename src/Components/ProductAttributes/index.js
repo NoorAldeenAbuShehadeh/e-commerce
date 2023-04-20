@@ -17,7 +17,7 @@ const ProductAttributes = ({ Product }) => {
   };
   const {category,description,price,rating:{count,rate},title}=Product;
   return (
-    <div>
+    <Box sx={{marginTop:{xs:'2px',md:'0px'}}}>
       <Typography
         sx={{ fontSize: "24px", fontWeight: 600, marginBottom: "10px" ,width:'350px'}}
       >
@@ -87,7 +87,7 @@ const ProductAttributes = ({ Product }) => {
         </Button>
       </Box>
       <Frame911/>
-    </div>
+    </Box>
   );
 };
 

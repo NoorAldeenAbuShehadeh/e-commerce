@@ -5,12 +5,13 @@ import SharedTitle from "../SharedTitle";
 import axios from "axios";
 import styles from "./index.module.css";
 import ProductAttributes from "../ProductAttributes";
-import PathActive from '../PathActive'
-import { Box } from "@mui/material";
+import PathActive from "../PathActive";
+import Gallery from "../Gallery/Gallery";
+import { Box, Container } from "@mui/material";
 const baseURL = "https://fakestoreapi.com/products";
 const DetailsPage = (props) => {
   const params = useParams();
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       const data = response.data.filter((el) => el.id == params.id);
@@ -18,16 +19,19 @@ const DetailsPage = (props) => {
     });
   }, []);
 
-  if(!product) return <></>
+  if (!product) return <></>;
+  console.log(product)
   return (
-    <div className={styles.content}>
-      <Box>
-        <PathActive category={product.category} title={product.title}/>
+    <Container className={styles.content}>
+      <Box sx={{margin:'30px 0px'  }}>
+        <PathActive category={product.category} title={product.title} />
       </Box>
-      <ProductAttributes Product={product}/>
-      <RelatedItems product={params.id} />
-
-    </div>
+      <Box sx={{ display: "flex",flexDirection:{xs:'column',md:'row'} }}>
+        <Gallery Image={product.image}/>
+        <ProductAttributes Product={product} />
+      </Box>
+      <RelatedItems id={params.id} />
+    </Container>
   );
 };
 export default DetailsPage;

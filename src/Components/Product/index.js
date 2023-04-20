@@ -13,6 +13,7 @@ import SharedTitle from "../SharedTitle";
 import styles from "./index.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const [showBtn, setShowBtn] = useState(false);
@@ -76,11 +77,12 @@ const Product = (props) => {
           </Button>
         )}
       </Card>
+      <Link to={`/Details/${props.id}`} preventScrollReset={true} onClick  className={styles.Link}> 
       <SharedTitle
         title={props.title}
         className={styles.product_title}
-        onClick={() => navigate(`/Details/${props.id}`)}
-      />
+        // onClick={() => navigate(`/Details/${props.id}`)}
+      /></Link>
       <SharedTitle
         title={`$${props.price}`}
         className={styles.product_price}

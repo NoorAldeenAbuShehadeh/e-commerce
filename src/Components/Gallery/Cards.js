@@ -13,6 +13,7 @@ function Thumbnail({ image, isSelected, onClick }) {
         src={image.src}
         alt={`Image ${image.id}`}
         className={styles.thumbnailImage}
+        sx={{objectFit: 'contain'}}
       />
     </Card>
   );

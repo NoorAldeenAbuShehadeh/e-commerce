@@ -26,9 +26,15 @@
 
 .product_title {
     font-size: 16px;
-
+    color: #000000;
+    opacity: 0.8;
 }
-
+.product_title:hover {
+    opacity: 1;
+}
+.Link{
+    text-decoration: none;
+}
 .product_content {
     justify-content: center;
     display: flex;

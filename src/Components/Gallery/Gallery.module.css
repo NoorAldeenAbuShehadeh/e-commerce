@@ -7,7 +7,7 @@
 }
 
 .mainThumbnail {
-  width: 500px;
+  width: 400px;
   height: 600px;
   background: #F5F5F5;
   border-radius: 4px;
@@ -16,19 +16,16 @@
 .mainImage{
   width: 446px;
   height: 297px;
-  padding-left: 27px;
-  padding-top: 165px;
+  padding-top: 80px;
 }
 
 .thumbnail {
-
   cursor: pointer;
   margin-bottom: 16px;
   width: 170px;
   height: 138px;
   background: #F5F5F5;
   border-radius: 4px;
-
 }
 
 .selectedThumbnail {
@@ -40,14 +37,12 @@
   height: 138px;
   background: #F5F5F5;
   border-radius: 4px ;
-
+  border: 1px solid blue;
 }
 
 .thumbnailImage {
-
   width: 122px;
   height: 106px;
-  padding-left: 24px;
   padding-top: 16px;
 
 }
