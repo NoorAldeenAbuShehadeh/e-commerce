@@ -34,8 +34,8 @@ const HomePage = () => {
       <Divider variant="middle" />
       <NewProducts />
       <CatProduct />
-      {/* <ImageGrid />
-      <EServices /> */}
+      <ImageGrid />
+      <EServices />
     </Box>
   );
 };

@@ -5,7 +5,7 @@ import Colors from "./Colors";
 import CountItem from "./CountItem";
 import Sizes from "./Sizes";
 import Frame911 from '../Frame911/Frame911'
-const ProductAttributes = ({ title, rate, price, details }) => {
+const ProductAttributes = ({ Product }) => {
   const StyleUnClickedBtn = {
     minWidth: "0",
     width: "40px!important",
@@ -15,11 +15,11 @@ const ProductAttributes = ({ title, rate, price, details }) => {
     "&:hover": { backgroundColor: "white", borderColor: "black" },
     borderColor: "black!important",
   };
-
+  const {category,description,price,rating:{count,rate},title}=Product;
   return (
     <div>
       <Typography
-        sx={{ fontSize: "24px", fontWeight: 600, marginBottom: "10px" }}
+        sx={{ fontSize: "24px", fontWeight: 600, marginBottom: "10px" ,width:'350px'}}
       >
         {title}
       </Typography>
@@ -34,7 +34,7 @@ const ProductAttributes = ({ title, rate, price, details }) => {
       >
         <Rating name="read-only" value={rate} readOnly size="small" />
         <Typography sx={{ opacity: 0.4, fontSize: "14px" }}>
-          (150 Reviews)
+          ({count} Reviews)
         </Typography>
         <Typography sx={{ opacity: 0.4, fontSize: "14px" }}>|</Typography>
         <Typography sx={{ color: "#00FF66", fontSize: "14px" }}>
@@ -51,7 +51,7 @@ const ProductAttributes = ({ title, rate, price, details }) => {
       <Typography
         sx={{ maxWidth: "360px", fontSize: "14px", marginBottom: "10px"}}
       >
-        {details}
+        {description}
       </Typography>
       <Divider sx={{ width: "380px", marginBottom: "10px" }} />
 

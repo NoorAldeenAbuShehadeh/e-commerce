@@ -1,6 +1,6 @@
 import { Breadcrumbs, Typography,Link } from "@mui/material";
 
-const PathActive = ({type, name}) => {
+const PathActive = ({category, title}) => {
   return (
     <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="#">
@@ -11,9 +11,9 @@ const PathActive = ({type, name}) => {
           color="inherit"
           href="#"
         >
-          {type}
+          {category}
         </Link>
-        <Typography color="text.primary">{name}</Typography>
+        <Typography color="text.primary">{title}</Typography>
       </Breadcrumbs>
   )
 }
