@@ -9,6 +9,7 @@ const ImageGrid = () => {
     const renderImageGrid = () => {
         return (
           <>
+          
             <Grid item xs={8} className={styles.left}>
                 <Grids  myImage= {images[0].src} id={images[0].id} imageClass={styles.image1} boxClass={styles.box1} name={images[0].title} desc={images[0].desc} buttonClass={styles.buyButton} nameClass={styles.productName1} descClass={styles.productDescription1} />
             </Grid>
