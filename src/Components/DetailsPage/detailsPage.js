@@ -4,6 +4,7 @@ import RelatedItems from "../Products/relatedItems";
 import ProductTitle from "../ProductTitle";
 import axios from "axios";
 import styles from "./index.module.css";
+import ProductAttributes from "../ProductAttributes";
 
 const baseURL = "https://fakestoreapi.com/products";
 const DetailsPage = (props) => {
@@ -33,6 +34,14 @@ const DetailsPage = (props) => {
         <ProductTitle title={` / `} sx={textTitle} />
         <ProductTitle title={`${params.product}`} />
       </div>
+      <ProductAttributes
+        title={"Havic HV G-92 Gamepad"}
+        rate={3}
+        price={55}
+        details={
+          "PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive."
+        }
+      />
       <RelatedItems product={params.product} />
     </div>
   );

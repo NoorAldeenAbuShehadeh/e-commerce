@@ -22,8 +22,8 @@ const IconDelivery1 = styled('div')({
 
 
 const Vector3 = styled('img')({
-  height: `20px`,
-  width: `31.67px`,
+  height: `40px`,
+  width: `40px`,
   position: `absolute`,
   left: `3px`,
   top: `8px`,
@@ -32,7 +32,7 @@ const Vector3 = styled('img')({
 function IconDelivery(props) {
   return (
     <IconDelivery1 className={props.className}>
-      <Vector3 src="del.png" loading="lazy" alt={'Vector'} /> 
+      <Vector3 src="../del.png" loading="lazy" alt={'Vector'} /> 
     </IconDelivery1>
   );
 }

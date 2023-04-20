@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import Colors from "./Colors";
 import CountItem from "./CountItem";
 import Sizes from "./Sizes";
+import Frame911 from '../Frame911/Frame911'
 const ProductAttributes = ({ title, rate, price, details }) => {
   const StyleUnClickedBtn = {
     minWidth: "0",
@@ -85,6 +86,7 @@ const ProductAttributes = ({ title, rate, price, details }) => {
           <FavoriteBorderIcon />
         </Button>
       </Box>
+      <Frame911/>
     </div>
   );
 };

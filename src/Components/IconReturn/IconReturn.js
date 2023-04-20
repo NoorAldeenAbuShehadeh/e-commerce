@@ -38,8 +38,8 @@ const Vector2 = styled('img')({
 function IconReturn(props) {
   return (
     <IconReturn1 className={props.className}>
-      <Vector1 src="ret1.png" loading="lazy" alt='Vector' />
-      <Vector2 src="ret2.png" loading="lazy" alt='Vector' />
+      <Vector1 src="../ret1.png" loading="lazy" alt='Vector' />
+      <Vector2 src="../ret2.png" loading="lazy" alt='Vector' />
     </IconReturn1>
   );
 }

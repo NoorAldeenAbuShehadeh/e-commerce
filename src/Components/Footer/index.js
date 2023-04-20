@@ -119,7 +119,7 @@ export const Footer = () => {
               Save $3 with App New User Only
             </Typography>
             <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-              <img src="Qrcode 1.png" />
+              <img src="../Qrcode 1.png" />
               <Box
                 sx={{
                   display: "flex",
@@ -128,18 +128,18 @@ export const Footer = () => {
                 }}
               >
                 <img
-                  src="logo-google-play.png"
+                  src="../logo-google-play.png"
                   className={Style.install_logo}
                 />
-                <img src="logo-appstore.png" className={Style.install_logo} />
+                <img src="../logo-appstore.png" className={Style.install_logo} />
               </Box>
             </Grid>
-            <ImageList cols={4}>
-              <img src="icon-facebook.png" />
-              <img src="icon-twitter.png" />
-              <img src="icon-instagram.png" />
-              <img src="icon-linkedIn.png" />
-            </ImageList>
+            <Box sx={{display:'flex',width:'120px',justifyContent:'space-between', marginTop:"10px"}}>
+              <img src="../icon-facebook.png" />
+              <img src="../icon-twitter.png" />
+              <img src="../icon-instagram.png" />
+              <img src="../icon-linkedIn.png" />
+            </Box>
           </Grid>
         </Grid>
       </Container>

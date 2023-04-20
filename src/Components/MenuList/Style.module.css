@@ -5,13 +5,8 @@ ul{
   align-items: flex-start;
   padding: 0px;
   gap: 16px;
-  
-  position: absolute;
   width: 217px;
   height: 344px;
-  left: 135px;
-  top: 182px;
-  
 }
 
 .icon_{
@@ -36,7 +31,6 @@ font-size: large;
 line-height: 24px;
 /* identical to box height, or 150% */
 
-text-align: center;
 
 /* Text2 */
 
@@ -67,4 +61,3 @@ flex-grow: 0;
   order: 0;
   flex-grow: 0;
 }
-

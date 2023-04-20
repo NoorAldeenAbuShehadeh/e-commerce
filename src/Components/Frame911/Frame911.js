@@ -14,7 +14,7 @@ const Frame9111 = styled('div')({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `row`,
-  width: '100%',
+  maxWidth: '350px',
   height: `180px`,
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
