@@ -11,11 +11,13 @@ const ImageGrid = () => {
      
         return (
           <>
-            <Grid item xs={8} className={`${styles.left} `} >
+
+            <Grid item className={`${styles.left} `}>
+
                 <Grids  myImage= {images[0].src} id={images[0].id} imageClass={styles.mainImage} boxClass={styles.mainBox} name={images[0].title} desc={images[0].desc} buttonClass={styles.buyButton} nameClass={styles.mainProductName} descClass={styles.mainProductDescription} />
             </Grid>
             <Grid item container xs={4} direction="column" className={styles.right}>
-                <Grid item xs={8} direction="row" className={styles.rightTop}>
+                <Grid item  direction="row" className={styles.rightTop}>
                     <Grids  myImage= {images[1].src} id={images[1].id} imageClass={styles.secondaryImage} boxClass={styles.secondaryBox} name={images[1].title} desc={images[1].desc} buttonClass={styles.buyButton} nameClass={styles.secondaryProductName} descClass={styles.secondaryProductDescription} />
                 </Grid>
                 <Grid item xs className={styles.rightBottom}>

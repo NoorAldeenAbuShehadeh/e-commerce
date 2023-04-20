@@ -15,10 +15,12 @@ const EServices = () => {
               title={image.title}
             />
             <CardContent className={styles.descBox}>
-              <Typography gutterBottom variant="h5" component="h4" className={styles.mainDesc} sx={{fontSize:'1rem'}}>
+
+              <Typography gutterBottom variant="h5"  className={styles.mainDesc}>
+
                 {image.mainDescription}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" className={styles.secondaryDesc}>
+              <Typography  className={styles.secondaryDesc}>
                 {image.secondaryDescription}
               </Typography>
             </CardContent>
