@@ -1,0 +1,63 @@
+ul{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 217px;
+  height: 344px;
+}
+
+.icon_{
+  display: flex;
+  margin-top: -23px;
+  margin-left: 186px;
+}
+
+.navbar__list {
+  list-style-type: none;
+
+}
+.navbar__li {
+  width: 142px;
+  height: 24px;
+/* Title/16PX Regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: large;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+/* Text2 */
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.navbar__li-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 51px;
+  
+  width: 217px;
+  height: 24px;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

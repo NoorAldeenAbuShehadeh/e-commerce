@@ -91,7 +91,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <HomeIcon />
         <Link
-          href="#"
+          href="/"
           underline="always"
           sx={{
             color: "black",
@@ -121,7 +121,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <InfoIcon />
         <Link
-          href="#"
+          href="/AboutMe"
           underline="hover"
           sx={{
             color: "black",
@@ -185,7 +185,7 @@ export default function PrimarySearchAppBar() {
               }}
             >
               <Link
-                href="#"
+                href="/"
                 underline="always"
                 sx={{ color: "black", fontSize: "16px", fontWeight: 550 }}
               >
@@ -199,7 +199,7 @@ export default function PrimarySearchAppBar() {
                 Contact
               </Link>
               <Link
-                href="#"
+                href="/AboutMe"
                 underline="hover"
                 sx={{ color: "black", fontSize: "16px", fontWeight: 550 }}
               >
