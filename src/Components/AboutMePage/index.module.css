@@ -1,0 +1,146 @@
+.team_content {
+    margin-bottom: -2em;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+.Title {
+    margin-left: 2.2em;
+    margin-top: 5em;
+    display: flex;
+}
+
+.aboutme_title {
+    font-size: 54px;
+    margin-bottom: 2em;
+
+}
+
+.member {
+
+    margin: 1em;
+    height: auto;
+    margin-top: 2em;
+    min-height: 500px;
+
+}
+
+.icons {
+    display: flex;
+    column-gap: 0.3em;
+}
+
+.image {
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.2em;
+    margin-top: 5em;
+    column-gap: 3em;
+}
+
+
+.aboutme_text {
+    margin-top: 7em;
+}
+
+.card {
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.img {
+
+    width: 80px;
+    height: 80px;
+    flex: none;
+    order: 1;
+    margin-top: 1em;
+    flex-grow: 0;
+}
+
+.descBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.mainDesc {
+    width: auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    text-align: center;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.secondaryDesc {
+    height: auto;
+    width: fit-content;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.dots{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -5em;
+}
+@media only screen and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        row-gap: 3em;
+    }
+
+    .Title {
+        flex-direction: column;
+    }
+
+    .story_image {
+        margin-top: 1em;
+    }
+
+    .icons {
+        flex-direction: column;
+    }
+
+}
