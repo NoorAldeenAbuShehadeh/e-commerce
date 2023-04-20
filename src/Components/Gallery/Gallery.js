@@ -23,8 +23,8 @@ function Gallery({Image}) {
   };
 
   return (
-    <Grid container spacing={2} className={styles.grid} >
-      <Grid item xs={12} sm={4}>
+    <Grid sx={{display:'flex',marginRight:{xs:'0px',md:'20px'}}}>
+      <Grid item xs={12} sm={4} sx={{marginRight:'20px'}}>
         {IMAGES.map((image) => (
           <Thumbnail
             key={image.id}

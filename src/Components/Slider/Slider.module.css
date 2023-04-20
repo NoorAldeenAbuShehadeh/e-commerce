@@ -1,6 +1,6 @@
 .root {
    
-    height: 344px;  
+    height: 400px;  
    width: 892px;
     margin-top: 45px;
     margin-left: 10px;
@@ -38,7 +38,7 @@
   width: 113px;
   height: 28px;
   left: 67px;
-  top: 269px;
+  top: 320px;
 }
 
 .arrowIcon{
@@ -62,7 +62,6 @@ flex-grow: 0;
 .slideDescription{
   position: absolute;
   width: 294px;
-  height: 120px;
   left: 64px;
   top: 127px;
   font-family: 'Inter';

@@ -17,7 +17,7 @@ const ProductAttributes = ({ Product }) => {
   };
   const {category,description,price,rating:{count,rate},title}=Product;
   return (
-    <Box sx={{marginTop:{xs:'2px',md:'0px'}}}>
+    <Box sx={{marginLeft:{xs:'0px',md:'20px'}}}>
       <Typography
         sx={{ fontSize: "24px", fontWeight: 600, marginBottom: "10px" ,width:'350px'}}
       >

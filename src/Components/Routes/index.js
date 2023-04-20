@@ -12,9 +12,8 @@ const routes = () => {
         <Route path="/" element={<MainPage />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/Details/:id" element={<DetailsPage />} />
-          <Route path="*" element={<NotFoundPage />}/>
           <Route path="/AboutMe" element={<AboutMe />} />
-          {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}
+          <Route path="*" element={<NotFoundPage />}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -47,17 +47,61 @@
 
 }
 
-@media (max-width: 600px) {
-  .thumbnail {
-    height: 75px;
-  }
 
+
+
+
+@media (max-width: 1000px) {
+  .thumbnail {
+    width: 150px;
+    height: 112px;
+  }
   .selectedThumbnail {
-    height: 75px;
-    border: 1px solid blue;
+    width: 150px;
+    height: 112px;
+  }
+  .mainImage{
+    width: 500px;
+    height: 200px;
   }
 
   .thumbnailImage {
-    height: 75px;
+    width: 142px;
+    height: 106px;
+  
   }
+
+  .mainThumbnail {
+    width: 300px;
+    height: 500px;
+  }
+
 }
+
+@media (max-width: 600px) {
+  .thumbnail {
+    width: 90px;
+    height: 112px;
+  }
+  .selectedThumbnail {
+    width: 90px;
+    height: 112px;
+  }
+  .mainImage{
+    width: 400px;
+    height: 200px;
+  }
+
+  .thumbnailImage {
+    width: 122px;
+    height: 106px;
+  
+  }
+
+  .mainThumbnail {
+    width: 230px;
+    height: 500px;
+  }
+
+}
+

@@ -5,7 +5,7 @@ import style from './Slider.module.css';
 import Carousel from 'react-material-ui-carousel';
 import Box from '@mui/material/Box';
 import { slides } from './data';
-
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const Slider = () => {
   return (
     <Box className={style.root}>
@@ -25,7 +25,7 @@ const Slider = () => {
             <Box className={style.slideContent}>
               <img className={style.slideTitle} src={slide.tag} />
               <div className={style.slideDescription}>{slide.description}</div>
-              <a className={style.buyButton} href='#'>Shop Now</a>
+              <a className={style.buyButton} href='#'>Shop Now <ArrowForwardIcon/></a>
             </Box>
           </Box>
         ))}
