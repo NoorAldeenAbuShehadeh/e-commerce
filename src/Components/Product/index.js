@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-import ProductTitle from "../ProductTitle";
+import SharedTitle from "../SharedTitle";
 import styles from "./index.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -76,12 +76,12 @@ const Product = (props) => {
           </Button>
         )}
       </Card>
-      <ProductTitle
+      <SharedTitle
         title={props.title}
         className={styles.product_title}
-        onClick={() => navigate(`/Details/${props.title}`)}
+        onClick={() => navigate(`/Details/${props.id}`)}
       />
-      <ProductTitle
+      <SharedTitle
         title={`$${props.price}`}
         className={styles.product_price}
       />

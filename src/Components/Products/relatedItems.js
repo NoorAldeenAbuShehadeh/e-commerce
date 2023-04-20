@@ -14,9 +14,7 @@ const RelatedItems = (props) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get(baseURL).then((response) => {
-      const data = response.data.filter((el) => el.title == props.product);
-      // console.log(data.filter(el=>el.title === props.product ));
-      console.log(data);
+      const data = response.data.filter((el) => el.id == props.id);
       setProducts(
         response.data.filter((el) => data[0].category == el.category)
       );

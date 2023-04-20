@@ -5,7 +5,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ProductTitle from "../ProductTitle";
+import SharedTitle from "../SharedTitle";
 import ProductsSlider from "./products_slider";
 import SharedSubtitle from "../sharedSubtitle";
 import axios from "axios";
@@ -30,7 +30,7 @@ const NewProducts = () => {
     <div className={styles.content}>
       <SharedSubtitle title={"Our Product's"} />
       <div className={styles.container}>
-        <ProductTitle
+        <SharedTitle
           variant="h5"
           className={styles.products_title}
           title={"Explore Our Products"}
