@@ -13,7 +13,7 @@ const routes = () => {
       <Routes>
         <Route path="/" element={<MainPage/>}>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/Details/:product" element={<DetailsPage />} />
+          <Route path="/Details/:id" element={<DetailsPage />} />
           {/* <Route path="*" element={<h1>404 Not Found</h1>}/> */}
         </Route>
       </Routes>

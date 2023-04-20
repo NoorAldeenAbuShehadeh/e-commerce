@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
 
-const ProductTitle = (props) => {
+const SharedTitle = (props) => {
   return (
     <Typography mt={2} {...props}>
       {props.title}
     </Typography>
   );
 };
-export default ProductTitle;
+export default SharedTitle;

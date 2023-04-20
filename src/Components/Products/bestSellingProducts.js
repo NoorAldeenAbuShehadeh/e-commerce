@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ProductsSlider from "./products_slider";
 import styles from "./index.module.css";
 import SharedSubtitle from "../sharedSubtitle";
-import ProductTitle from "../ProductTitle";
+import SharedTitle from "../SharedTitle";
 import axios from "axios";
 const baseURL = "https://fakestoreapi.com/products";
 const BestProducts = () => {
@@ -18,7 +18,7 @@ const BestProducts = () => {
     <div className={styles.content}>
       <SharedSubtitle title={"This Month"} />
       <div className={styles.container}>
-        <ProductTitle
+        <SharedTitle
           variant="h5"
           className={styles.products_title}
           title={"Best Selling Products"}
