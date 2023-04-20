@@ -3,6 +3,7 @@ import styles from './ImageGrid.module.css';
 import React from 'react';
 import { images } from './data';
 import Grids from './Grids/Grids';
+import { Box, Container } from '@mui/material';
 //import { makeStyles } from '@material-ui/styles';
 
 
@@ -10,9 +11,9 @@ const ImageGrid = () => {
     const renderImageGrid = () => {
      
         return (
-          <>
+          <Box sx={{width:'100%' ,display:'flex',alignItems:'center',justifyContent:'space-evenly'}} >
 
-            <Grid item className={`${styles.left} `}>
+            <Grid item className={`${styles.left} `} >
 
                 <Grids  myImage= {images[0].src} id={images[0].id} imageClass={styles.mainImage} boxClass={styles.mainBox} name={images[0].title} desc={images[0].desc} buttonClass={styles.buyButton} nameClass={styles.mainProductName} descClass={styles.mainProductDescription} />
             </Grid>
@@ -29,7 +30,7 @@ const ImageGrid = () => {
                     </Grid>
                 </Grid>              
             </Grid>
-          </>
+          </Box>
         );
       };
       
