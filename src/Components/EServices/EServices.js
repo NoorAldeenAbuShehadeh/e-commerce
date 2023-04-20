@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { Card, CardMedia, CardContent, Typography ,Box} from '@mui/material';
 import styles from './EServices.module.css';
 import { images } from './data';
  
@@ -7,6 +7,7 @@ const EServices = () => {
     return (
       <div className={styles.container}>
         {images.map((image) => (
+
           <Card key={image.id} className={styles.card}  >
             <CardMedia
               className={styles.img}
@@ -22,6 +23,7 @@ const EServices = () => {
               </Typography>
             </CardContent>
           </Card>
+    
         ))}
       </div>
     );

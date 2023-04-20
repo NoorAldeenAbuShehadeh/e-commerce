@@ -1,11 +1,13 @@
+ 
 .content {
     margin-top: 15em;
     margin-bottom: 4em;
     padding-left: 24px;
     padding-right: 24px;
+    
 }
 .container{
-    margin: 60px 110px;
+    margin: 60px 100px;
 }
 .products_title {
     font-size: 36px;
@@ -16,11 +18,12 @@
     align-items: flex-start;
     padding: 0px;
     gap: 30px;
-    width: 1170px;
+    max-width: 1170px;
     height: 600px;
     flex: none;
     order: 1;
     flex-grow: 0;
+    
 
 }
 
@@ -44,7 +47,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 32px;
+     gap: 38px;
     width: 570px;
     height: 600px;
     flex: none;
@@ -62,14 +65,14 @@
     order: 0;
     flex-grow: 0;
 }
-.image1{
+.mainImage{
     position: absolute;
     width: 426px;
     height: 501px;
     padding-left: 53px;
     padding-top: 91px;
 }
-.box1{
+.mainBox{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -81,7 +84,7 @@
     padding-left: 32px;
     padding-top: 446px;
 }
-.productName1{
+.mainProductName{
     width: 166px;
     height: 24px;
     font-family: 'Inter';
@@ -95,7 +98,7 @@
     order: 0;
     flex-grow: 0;
 }
-.productDescription1{
+.mainProductDescription{
     width: 242px;
     height: 42px;
     font-family: 'Poppins';
@@ -120,7 +123,7 @@
     flex-grow: 0;
 }
 
-.box2{
+.secondaryBox{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -133,14 +136,14 @@
     padding-top: 138px;
 }
 
-.image2 {
+.secondaryImage {
     position: absolute;
     width: 432px;
     height: 284px;
     padding-left: 138px;
 }
 
-.productName2{
+.secondaryProductName{
     width: 255px;
     height: 24px;
     font-family: 'Inter';
@@ -155,7 +158,7 @@
     flex-grow: 0;
 }
 
-.productDescription2{
+.secondaryProductDescription{
     width: 255px;
     height: 42px;
     font-family: 'Poppins';
@@ -194,7 +197,7 @@
     flex-grow: 0;
 }
 
-.box3{
+.leftSmallBox{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -206,14 +209,14 @@
     padding-left: 24px;
     padding-top: 175px;
 }
-.image3 {
+.leftSmallImage {
     position: absolute;
     width: 190px;
     height: 221px;
     padding-left: 40px;
     padding-top: 31px;
 }
-.productName3{
+.leftSmallProductName{
     width: 114px;
     height: 24px;
     font-family: 'Inter';
@@ -227,7 +230,7 @@
     order: 0;
     flex-grow: 0;
 }
-.productDescription3{
+.leftProductDescription{
     width: 191px;
     height: 21px;
     font-family: 'Poppins';
@@ -254,7 +257,7 @@
     flex-grow: 0;
 }
 
-.box4{
+.rightSmallBox{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -268,7 +271,7 @@
 }
 
 
-.image4 {
+.rightSmallImage {
     position: absolute;
     width: 201px;
     height: 203px;
@@ -281,7 +284,7 @@
     padding-left: 34px;
 }
 
-.productName4{
+.rightSmallProductName{
     width: 104px;
     height: 24px;
     font-family: 'Inter';
@@ -296,7 +299,7 @@
     flex-grow: 0;
 }
 
-.productDescription4{
+.rightProductDescription{
     width: 191px;
     height: 21px;
     font-family: 'Poppins';
@@ -310,3 +313,31 @@
     flex-grow: 0;
 }
 
+@media (max-width: 1151px ) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gridContainer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        gap: 50px;
+    }
+    .left, .right {
+        /* width: 100%; */
+        height: auto;
+    }
+    .mainImage, .mainBox, .secondaryImage, .secondaryBox, .leftSmallBox {
+        position: static;
+        width: 426px;
+        padding: 0;
+        text-align: center;
+        gap: 20px;
+    }
+    .buyButton {
+        margin-top: 20px;
+    }
+}

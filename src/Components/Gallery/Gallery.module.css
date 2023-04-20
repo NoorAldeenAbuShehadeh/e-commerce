@@ -1,0 +1,68 @@
+.grid {
+  margin-left: 300px;
+  margin-top: 300px;
+
+  width: 600px;
+  height: 700px;
+}
+
+.mainThumbnail {
+  width: 500px;
+  height: 600px;
+  background: #F5F5F5;
+  border-radius: 4px;
+}
+
+.mainImage{
+  width: 446px;
+  height: 297px;
+  padding-left: 27px;
+  padding-top: 165px;
+}
+
+.thumbnail {
+
+  cursor: pointer;
+  margin-bottom: 16px;
+  width: 170px;
+  height: 138px;
+  background: #F5F5F5;
+  border-radius: 4px;
+
+}
+
+.selectedThumbnail {
+ 
+  cursor: pointer;
+  margin-bottom: 16px;
+  
+  width: 170px;
+  height: 138px;
+  background: #F5F5F5;
+  border-radius: 4px ;
+
+}
+
+.thumbnailImage {
+
+  width: 122px;
+  height: 106px;
+  padding-left: 24px;
+  padding-top: 16px;
+
+}
+
+@media (max-width: 600px) {
+  .thumbnail {
+    height: 75px;
+  }
+
+  .selectedThumbnail {
+    height: 75px;
+    border: 1px solid blue;
+  }
+
+  .thumbnailImage {
+    height: 75px;
+  }
+}
