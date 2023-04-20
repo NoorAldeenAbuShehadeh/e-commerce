@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import  Style from './Style.module.css';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Box } from "@mui/material";
 
 const MenuList = ({ li }) => {
   const [window] = useState(false);
 
 
   return (
-    <nav className= {Style.navbarmenu} style={{ width: window === false ? 250 : 60 }}>
+    <Box className= {Style.navbarmenu} sx={{width: window === false ? 250 : 60,display:{xs:'none',md:'block'}}}>
      
       <ul className={Style.navbar__list}>
         {li.map((item, i) => (
@@ -28,7 +29,7 @@ const MenuList = ({ li }) => {
           </div>
         ))}
       </ul>
-    </nav>
+    </Box>
   );
 };
 
