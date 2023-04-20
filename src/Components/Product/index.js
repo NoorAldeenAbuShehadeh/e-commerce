@@ -9,17 +9,21 @@ import {
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-import ProductTitle from "../ProductTitle";
+import SharedTitle from "../SharedTitle";
 import styles from "./index.module.css";
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const [showBtn, setShowBtn] = useState(false);
+  const navigate = useNavigate();
   const avatarT = props.percentage ? (
     <div className={styles.left_icon}>-40%</div>
   ) : props.new && props.id % 2 == 0 ? (
     <div className={styles.new_icon}> New</div>
   ) : null;
+
   return (
     <div className={`${styles.product}`}>
       <Card
@@ -73,8 +77,13 @@ const Product = (props) => {
           </Button>
         )}
       </Card>
-      <ProductTitle title={props.title} className={styles.product_title} />
-      <ProductTitle
+      <Link to={`/Details/${props.id}`} preventScrollReset={true} onClick  className={styles.Link}> 
+      <SharedTitle
+        title={props.title}
+        className={styles.product_title}
+        // onClick={() => navigate(`/Details/${props.id}`)}
+      /></Link>
+      <SharedTitle
         title={`$${props.price}`}
         className={styles.product_price}
       />

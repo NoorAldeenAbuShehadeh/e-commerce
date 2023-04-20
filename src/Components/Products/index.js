@@ -1,17 +1,25 @@
 import styles from "./index.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ProductTitle from "../ProductTitle";
+import SharedTitle from "../SharedTitle";
 import ProductsSlider from "./products_slider";
 import DateTimeContainer from "./DateTime";
 import SharedSubtitle from "../sharedSubtitle";
+import axios from "axios";
+const baseURL = "https://fakestoreapi.com/products";
 
 const Products = () => {
   const [sliderRef, setSliderRef] = useState(null);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
   const arrowBtn = {
     background: "#f5f5f5",
     color: "black",
@@ -24,7 +32,7 @@ const Products = () => {
     <div className={styles.content}>
       <SharedSubtitle title={"Today's"} />
       <div className={styles.container}>
-        <ProductTitle
+        <SharedTitle
           variant="h5"
           className={styles.products_title}
           title={"Flash Sales"}
@@ -48,7 +56,11 @@ const Products = () => {
           </IconButton>
         </div>
       </div>
-      <ProductsSlider percentage={true} setSliderRef={setSliderRef} />
+      <ProductsSlider
+        percentage={true}
+        setSliderRef={setSliderRef}
+        products={products}
+      />
       <div className={styles.center_container}>
         <Button
           variant="contained"

@@ -8,14 +8,14 @@ import sec2 from './img/sec2.png';
 import sec3 from './img/sec3.png';
 import sec4 from './img/sec4.png';
 
-const IMAGES = [
-  { id: 1, src: sec1 },
-  { id: 2, src: sec2 },
-  { id: 3, src: sec3 },
-  { id: 4, src: sec4 },
-];
 
-function Gallery() {
+function Gallery({Image}) {
+  const IMAGES = [
+    { id: 1, src: Image },
+    { id: 2, src: Image },
+    { id: 3, src: Image },
+    { id: 4, src: Image },
+  ];
   const [selectedImage, setSelectedImage] = useState(IMAGES[0]);
 
   const handleImageClick = (image) => {
@@ -23,8 +23,8 @@ function Gallery() {
   };
 
   return (
-    <Grid container spacing={2} className={styles.grid}>
-      <Grid item xs={12} sm={4}>
+    <Grid sx={{display:'flex',marginRight:{xs:'0px',md:'20px'}}}>
+      <Grid item xs={12} sm={4} sx={{marginRight:'20px'}}>
         {IMAGES.map((image) => (
           <Thumbnail
             key={image.id}
@@ -41,6 +41,7 @@ function Gallery() {
             src={selectedImage.src}
             alt={`Image ${selectedImage.id}`}
             className={styles.mainImage}
+            sx={{objectFit: 'contain'}}
           />
         </Card>
       </Grid>

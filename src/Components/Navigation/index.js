@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import {AppBar, Box, Toolbar, Divider, Link, IconButton, Typography, 
   InputBase, Badge, MenuItem, Menu} from "@mui/material";
@@ -10,7 +9,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import InfoIcon from "@mui/icons-material/Info";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-
+import { useState } from "react";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -52,8 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
@@ -91,7 +89,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <HomeIcon />
         <Link
-          href="#"
+          href="/"
           underline="always"
           sx={{
             color: "black",
@@ -121,7 +119,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <InfoIcon />
         <Link
-          href="#"
+          href="/AboutMe"
           underline="hover"
           sx={{
             color: "black",
@@ -151,6 +149,7 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
   // -----------------------------------------------------------------------------------------------
+
   return (
     <Box sx={{ flexGrow: 1, marginTop: "20px", marginBottom: "10px"}}>
       <AppBar
@@ -185,7 +184,7 @@ export default function PrimarySearchAppBar() {
               }}
             >
               <Link
-                href="#"
+                href="/"
                 underline="always"
                 sx={{ color: "black", fontSize: "16px", fontWeight: 550 }}
               >
@@ -199,7 +198,7 @@ export default function PrimarySearchAppBar() {
                 Contact
               </Link>
               <Link
-                href="#"
+                href="/AboutMe"
                 underline="hover"
                 sx={{ color: "black", fontSize: "16px", fontWeight: 550 }}
               >
