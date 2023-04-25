@@ -1,5 +1,4 @@
 import { IconButton, Button } from "@mui/material";
-// import ProductsSlider from "./products_slider";
 import CategoryCard from "../CategoryCard";
 import styles from "./index.module.css";
 import { useState } from "react";
@@ -35,7 +34,6 @@ const Categories = () => {
           </IconButton>
         </div>
       </div>
-       {/* <CategoryCard percentage={false} slides={6} />  */}
   
     </div>
     
