@@ -8,6 +8,8 @@ import NewProducts from "../Products/exploreNewProducts";
 import EServices from "../EServices/EServices";
 import ImageGrid from "../ImageGrid/ImageGrid";
 import MenuList from "../MenuList";
+import Categories from "../Category/Categories";
+import CategorySlider from "../Category";
 const HomePage = () => {
   return (
     <Box>
@@ -31,6 +33,9 @@ const HomePage = () => {
       <Products />
       <Divider variant="middle" />
       <BestProducts />
+      <Divider variant="middle" />
+      <Categories/>
+      <CategorySlider/>
       <Divider variant="middle" />
       <NewProducts />
       <CatProduct />
