@@ -1,0 +1,103 @@
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    column-gap: 1em;
+
+}
+
+.separator {
+    color: #E07575;
+    margin-top: 1.7em;
+ 
+}
+
+.arrowBtn {
+    background: #F5F5F5;
+    border: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+}
+
+
+
+.center_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.content {
+    margin-top: 15em;
+    margin-bottom: 4em;
+    padding-left: 24px;
+    padding-right: 24px;
+
+}
+
+.slider {
+    text-align: center;
+  /* white-space: pre-wrap; */
+  font-synthesis: none;
+  color: rgba(219, 68, 68, 1);
+  font-style: normal;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  /* line-height: 20px; */
+  text-transform: none;
+  margin: -4px 33% 0px 8%;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 80%;
+ 
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.slick-track {
+    transform: none;
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+       
+    }
+
+    .content {
+        flex-direction: column;
+      
+    }
+
+
+}
+.slick-list {
+    text-align: center;
+    position: relative;
+    display: block;
+    overflow: inherit !important; 
+     margin: -55px 15em;
+}  
+#root > div.slick-slider.Category_slider__Ygyqq.slick-initialized > div{
+    text-align: center;
+    position: relative;
+    display: block;
+    overflow: visible !important; 
+     margin: -55px 15em;
+}
+

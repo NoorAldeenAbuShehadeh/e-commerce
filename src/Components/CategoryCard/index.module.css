@@ -1,0 +1,12 @@
+.category_card{
+    min-width: 170px;
+    /* max-width: 160px; */
+     margin: 0em 1.5em 2em 1em;   
+     height: 145px; 
+    transition: all 0.1s ease-in-out !important;
+    overflow: visible;
+}
+.category_card:hover{
+    background-color: #DB4444;
+    color: white;
+}
